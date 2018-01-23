@@ -220,8 +220,8 @@ def printer(res_dict):
                       grade),
                   '{} {}\n{} {}'.format(
                       metrics.mean_absolute_error.__name__,
-                      np.sqrt(metrics.mean_absolute_error(i[0], i[1])),
-                      metrics.mean_squared_error.__name__,
+                      metrics.mean_absolute_error(i[0], i[1]),
+                      'Root ' + str(metrics.mean_squared_error.__name__),
                       np.sqrt(metrics.mean_squared_error(i[0], i[1]))
                   ),
                   sep='\n',
